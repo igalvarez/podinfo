@@ -67,4 +67,3 @@ spec:
           initialDelaySeconds: 5
           timeoutSeconds: 5
         resources: {{- toYaml .Values.podinfo.podinfod.resources | nindent 10 }}
-      serviceAccountName: {{ include "chart2.fullname" . }}-

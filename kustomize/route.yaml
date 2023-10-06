@@ -1,0 +1,7 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+spec:
+  host: podinfo-demo.oapps.fqywlnxx.eastus.aroapp.io
+  port:
+    targetPort: http
+

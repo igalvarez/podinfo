@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "chart2.fullname" . }}-podinfo
+  labels:
+  {{- include "chart2.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.podinfo.type }}
+  selector:
+    app: podinfo
+  {{- include "chart2.selectorLabels" . | nindent 4 }}
+  ports:
+	{{- .Values.podinfo.ports | toYaml | nindent 2 -}}

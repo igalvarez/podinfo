@@ -1,5 +1,7 @@
 apiVersion: route.openshift.io/v1
 kind: Route
+metadata:
+  name: podinfo
 spec:
   host: podinfo-demo.apps.fqywlnxx.eastus.aroapp.io
   port:

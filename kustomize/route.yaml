@@ -3,6 +3,7 @@ kind: Route
 metadata:
   name: podinfo
 spec:
+  host: podinfo-git-chart-podinfo-openshift-gitops.apps.fqywlnxx.eastus.aroapp.io
   port:
     targetPort: http
   to:

@@ -1,0 +1,28 @@
+gitChart2Podinfo:
+  ports:
+  - name: http
+    port: 9898
+    protocol: TCP
+    targetPort: http
+  - name: grpc
+    port: 9999
+    protocol: TCP
+    targetPort: grpc
+  type: ClusterIP
+kubernetesClusterDomain: cluster.local
+podinfo:
+  podinfod:
+    env:
+      podinfoUiColor: '#34577c'
+    image:
+      repository: ghcr.io/stefanprodan/podinfo
+      tag: 6.5.1
+    imagePullPolicy: IfNotPresent
+    resources:
+      limits:
+        cpu: "2"
+        memory: 512Mi
+      requests:
+        cpu: 100m
+        memory: 64Mi
+  replicas: 1

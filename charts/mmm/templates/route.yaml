@@ -1,0 +1,13 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: {{ include "mmm.fullname" . }}-podinfo
+  labels:
+  {{- include "mmm.labels" . | nindent 4 }}
+spec:
+  host: podinfo-git-chart2-podinfo-openshift-gitops.apps.fqywlnxx.eastus.aroapp.io
+  port:
+    targetPort: http
+  to:
+    kind: Service
+    name: podinfo-git-chart2-podinfo

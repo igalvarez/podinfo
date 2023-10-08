@@ -3,7 +3,6 @@ kind: Route
 metadata:
   name: podinfo
 spec:
-  host: appdemo.apps.fqywlnxx.eastus.aroapp.io
   port:
     targetPort: http
   to:

@@ -20,5 +20,4 @@ jobs:
         id: checkov
         uses: bridgecrewio/checkov-action@v12
         with:
-          directory: $CLONEDIR
           framework: helm 

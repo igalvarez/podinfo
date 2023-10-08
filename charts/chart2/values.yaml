@@ -1,3 +1,14 @@
+gitChart2Podinfo:
+  ports:
+  - name: http
+    port: 9898
+    protocol: TCP
+    targetPort: http
+  - name: grpc
+    port: 9999
+    protocol: TCP
+    targetPort: grpc
+  type: ClusterIP
 kubernetesClusterDomain: cluster.local
 podinfo:
   podinfod:
@@ -14,14 +25,4 @@ podinfo:
       requests:
         cpu: 100m
         memory: 64Mi
-  ports:
-  - name: http
-    port: 9898
-    protocol: TCP
-    targetPort: http
-  - name: grpc
-    port: 9999
-    protocol: TCP
-    targetPort: grpc
   replicas: 1
-  type: ClusterIP

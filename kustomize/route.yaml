@@ -8,4 +8,4 @@ spec:
     targetPort: http
   to:
     kind: Service
-    name: podinfo
+    name: podinfo-git-chart2-podinfo

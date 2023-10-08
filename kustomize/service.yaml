@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: podinfo
+  name: podinfo-git-chart2-podinfo
 spec:
   type: ClusterIP
   selector:

@@ -23,5 +23,5 @@ podinfo:
     port: 9999
     protocol: TCP
     targetPort: grpc
-  replicas: 4
+  replicas: 1
   type: ClusterIP
